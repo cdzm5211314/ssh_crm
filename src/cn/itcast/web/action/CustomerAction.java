@@ -44,10 +44,27 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		return "listpageSUCCESS";
 	}
 	
-	//条件查询
-																																																																																				
+	//定义list变量
+	private List<Customer> list;
+	//生成变量的get方法
+	public List<Customer> getList() {
+		return list;
+	}
 	
-
+	//条件查询
+	public String listCodition(){
+		//判断是否输入内容
+		if(customer.getCustName() != null && !"".equals(customer.getCustName())){
+			//非空
+			List<Customer> list = customerService.findCodition(customer);
+			ServletActionContext.getRequest().setAttribute("list",list);
+		}else{
+			//为空
+			list = customerService.findAll();
+		}
+		return "listCoditionSUCCESS";
+	}																																																																																			
+	
 	//到添加页面
 	public String toAddPage(){
 		
@@ -63,10 +80,12 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		return "addCustomerSUCCESS";
 	}
 	
+	
+	
 	//客户列表
 	public String list(){
 		
-		List<Customer> list = customerService.findAll();
+		list = customerService.findAll();
 		//保存查询数据到域对象中
 		ServletActionContext.getRequest().setAttribute("list", list);
 		return "listSUCCESS";

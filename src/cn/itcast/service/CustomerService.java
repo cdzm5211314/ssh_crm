@@ -59,4 +59,9 @@ public class CustomerService {
 		return pageBean;
 	}
 	
+	//条件查询
+	public List<Customer> findCodition(Customer customer) {
+		return customerDao.findcodition(customer);
+	}
+	
 }

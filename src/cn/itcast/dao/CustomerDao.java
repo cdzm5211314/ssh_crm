@@ -20,4 +20,6 @@ public interface CustomerDao {
 
 	List<Customer> findPage(int begin, int pageSize);
 
+	List<Customer> findcodition(Customer customer);
+
 }

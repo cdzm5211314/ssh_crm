@@ -25,6 +25,9 @@
 			<result name="editCustomerSUCCESS" type="redirectAction">customer_list</result>
 			<!-- 分页列表 -->
 			<result name="listpageSUCCESS">/jsp/customer/listpage.jsp</result>
+			<!-- 条件查询 -->
+			<result name="listCoditionSUCCESS">/jsp/customer/list.jsp</result>
+			
 		</action>
 		
 	</package>

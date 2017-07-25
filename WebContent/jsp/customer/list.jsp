@@ -23,8 +23,9 @@
 <META content="MSHTML 6.00.2900.3492" name=GENERATOR>
 </HEAD>
 <BODY>
+<%-- 		action="${pageContext.request.contextPath }/customer_list.action" --%>
 	<FORM id="customerForm" name="customerForm"
-		action="${pageContext.request.contextPath }/customer_list.action"
+		action="${pageContext.request.contextPath }/customer_listCodition.action"
 		method=post>
 		
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>

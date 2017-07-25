@@ -3,6 +3,7 @@ package cn.itcast.dao;
 import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import com.sun.org.apache.xpath.internal.operations.And;
@@ -62,6 +63,18 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 		DetachedCriteria criteria = DetachedCriteria.forClass(Customer.class);
 		//2.调用模版中的方法实现
 		List<Customer> list = (List<Customer>) this.getHibernateTemplate().findByCriteria(criteria, begin, pageSize);
+		
+		return list;
+	}
+
+	//条件查询
+	public List<Customer> findcodition(Customer customer) {
+		//方法一: 
+//		List<Customer> list = (List<Customer>) this.getHibernateTemplate().find("from Customer where custName like ? ", "%"+customer.getCustName()+"%");
+		//方法二
+		DetachedCriteria criteria = DetachedCriteria.forClass(Customer.class);
+		criteria.add(Restrictions.like("custName","%"+customer.getCustName()+"%"));
+		List<Customer> list = (List<Customer>) this.getHibernateTemplate().findByCriteria(criteria);
 		
 		return list;
 	}
