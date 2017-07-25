@@ -1,5 +1,8 @@
 package cn.itcast.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Customer {
 	
 	private Integer cid;
@@ -9,6 +12,14 @@ public class Customer {
 	private String custPhone;
 	private String custMobile;
 	
+	//所有联系人
+	private Set<LinkMan> setLinkMan = new HashSet<LinkMan>(); 
+	public Set<LinkMan> getSetLinkMan() {
+		return setLinkMan;
+	}
+	public void setSetLinkMan(Set<LinkMan> setLinkMan) {
+		this.setLinkMan = setLinkMan;
+	}
 	public Integer getCid() {
 		return cid;
 	}

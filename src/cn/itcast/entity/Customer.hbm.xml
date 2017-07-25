@@ -12,6 +12,12 @@
 		<property name="custSource" column="custSource"></property>
 		<property name="custPhone" column="custPhone"></property>
 		<property name="custMobile" column="custMobile"></property>
+		
+		<set name="setLinkMan">
+			<key column="clid"></key>
+			<one-to-many class="cn.itcast.entity.LinkMan"/>
+		</set>
+		
 	</class>
 </hibernate-mapping>
 
