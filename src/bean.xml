@@ -53,6 +53,7 @@
 
 	<!-- 分模块操作 -->
 	<import resource="classpath:customer.xml"/>
+	<import resource="classpath:linkman.xml"/>
 	
 </beans>
 

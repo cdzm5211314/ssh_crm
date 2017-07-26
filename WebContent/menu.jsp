@@ -155,19 +155,19 @@ A.active {
 								</TR>
 								<TR>
 									<TD>
-										<TABLE id=table_2 style="DISPLAY: none" cellSpacing=0
-											cellPadding=2 width=155 align=center border=0>
-											<TBODY>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="linkmanServlet?method=add"
-														target=main>－ 新增联系人</A></TD>
-												</TR>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="linkmanServlet?method=list"
-														target=main>－联系人列表</A></TD>
-												</TR>
-												
-											</TBODY>
+<TABLE id=table_2 style="DISPLAY: none" cellSpacing=0
+	cellPadding=2 width=155 align=center border=0>
+	<TBODY>
+		<TR>
+			<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath}/linkman_toAddPage.action"
+				target=main>－ 新增联系人</A></TD>
+		</TR>
+		<TR>
+			<TD class=menuSmall><A class=style2 href="linkmanServlet?method=list"
+				target=main>－联系人列表</A></TD>
+		</TR>
+		
+	</TBODY>
 										</TABLE>
 									</TD>
 								</TR>

@@ -27,8 +27,17 @@
 			<result name="listpageSUCCESS">/jsp/customer/listpage.jsp</result>
 			<!-- 条件查询 -->
 			<result name="listCoditionSUCCESS">/jsp/customer/list.jsp</result>
-			
 		</action>
+		<!-- 联系人操作 -->
+		<action name="linkman_*" class="linkManAction" method="{1}">
+			<!-- 到联系人添加页面 -->
+			<result name="toAddPageSUCCESS">/jsp/linkman/add.jsp</result>
+			<!-- 添加联系人 -->
+			<result name="addLinkManSUCCESS">/jsp/success.jsp</result>
+		
+		
+		</action>
+		
 		
 	</package>
 
