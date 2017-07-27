@@ -1,5 +1,7 @@
 package cn.itcast.service;
 
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import cn.itcast.dao.LinkManDao;
@@ -15,6 +17,10 @@ public class LinkManService {
 	}
 	public void addLinkMan(LinkMan linkMan) {
 		linkManDao.save(linkMan);
+	}
+	public List<LinkMan> listLinkMan() {
+		// TODO Auto-generated method stub
+		return linkManDao.findAll();
 	}
 	
 	

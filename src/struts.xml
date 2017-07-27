@@ -34,7 +34,10 @@
 			<result name="toAddPageSUCCESS">/jsp/linkman/add.jsp</result>
 			<!-- 添加联系人 -->
 			<result name="addLinkManSUCCESS">/jsp/success.jsp</result>
-		
+			<!-- 配置input视图 -->
+			<result name="input">/jsp/error.jsp</result>
+			<!-- 联系人列表 -->
+			<result name="listSUCCESS">/jsp/linkman/list.jsp</result>
 		
 		</action>
 		

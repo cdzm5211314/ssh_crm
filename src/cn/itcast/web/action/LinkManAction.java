@@ -75,6 +75,16 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 		linkManService.addLinkMan(linkMan);
 		return "addLinkManSUCCESS";
 	}
-
-
+	
+	//联系人列表
+	public String list(){
+		//查询所有联系人
+		List<LinkMan> list = linkManService.listLinkMan();
+		//保存查询结果到域对象
+		ServletActionContext.getRequest().setAttribute("list", list);
+		return "listSUCCESS";
+	}
+	
+	
+	
 }
