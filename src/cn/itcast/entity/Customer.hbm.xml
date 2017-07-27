@@ -13,7 +13,7 @@
 		<property name="custPhone" column="custPhone"></property>
 		<property name="custMobile" column="custMobile"></property>
 		
-		<set name="setLinkMan" inverse="true">
+		<set name="setLinkMan" inverse="true" cascade="delete">
 			<key column="clid"></key>
 			<one-to-many class="cn.itcast.entity.LinkMan"/>
 		</set>
