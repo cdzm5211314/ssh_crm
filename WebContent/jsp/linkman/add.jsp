@@ -16,7 +16,7 @@
 <BODY>
 	<FORM id=form1 name=form1
 		action="${pageContext.request.contextPath }/linkman_addLinkMan.action"
-		method=post>
+		method="post" enctype="multipart/form-data">
 		
 
 		<TABLE cellSpacing=0 cellPadding=0 width="98%" border=0>
@@ -84,6 +84,15 @@
 														style="WIDTH: 180px" maxLength=50 name="lkmMobile">
 								</td>
 							</TR>
+	<TR>
+		<td>选择文件：</td>
+		<td>
+			<input type="file" name="upload" >
+		</td>
+		<td></td>
+		<td>
+		</td>
+	</TR>
 							<tr>
 								<td rowspan=2>
 								<INPUT class=button id=sButton2 type=submit
