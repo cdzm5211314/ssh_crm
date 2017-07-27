@@ -22,6 +22,13 @@ public class LinkManService {
 		// TODO Auto-generated method stub
 		return linkManDao.findAll();
 	}
+	public LinkMan findById(Integer linkid) {
+		return linkManDao.findById(linkid);
+	}
+	public void update(LinkMan linkMan) {
+		linkManDao.update(linkMan);
+	}
+
 	
 	
 	

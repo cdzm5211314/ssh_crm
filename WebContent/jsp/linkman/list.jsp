@@ -97,9 +97,9 @@
 					<TD>${linkman.lkmMobile }</TD>
 					<td>${linkman.customer.custName}</td>
 					<TD>
-					
+					<a href="${pageContext.request.contextPath }/linkman_showLinkMan.action?linkid=${linkman.linkid}">修改</a>
 					&nbsp;&nbsp;
-					
+					<a href="${pageContext.request.contextPath }/linkman_delete.action?linkid=${linkman.linkid}">删除</a>
 					</TD>
 				</TR>
 				

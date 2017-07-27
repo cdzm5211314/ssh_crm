@@ -33,12 +33,15 @@
 			<!-- 到联系人添加页面 -->
 			<result name="toAddPageSUCCESS">/jsp/linkman/add.jsp</result>
 			<!-- 添加联系人 -->
-			<result name="addLinkManSUCCESS">/jsp/success.jsp</result>
+			<result name="addLinkManSUCCESS" type="redirectAction">linkman_list</result>
 			<!-- 配置input视图 -->
 			<result name="input">/jsp/error.jsp</result>
 			<!-- 联系人列表 -->
 			<result name="listSUCCESS">/jsp/linkman/list.jsp</result>
-		
+			<!-- 到修改页面 -->
+			<result name="showLinkManSUCCESS">/jsp/linkman/edit.jsp</result>
+			<!-- 修改联系人 -->
+			<result name="updateSUCCESS" type="redirectAction">linkman_list</result>
 		</action>
 		
 		

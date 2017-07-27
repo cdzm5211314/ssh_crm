@@ -85,6 +85,23 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 		return "listSUCCESS";
 	}
 	
-	
+	//到联系人修改页面
+	public String showLinkMan(){
+		
+		LinkMan link = linkManService.findById(linkMan.getLinkid());
+		ServletActionContext.getRequest().setAttribute("linkman", link);
+		//还需要传所有客户的list集合
+		List<Customer> listCustomer = customerService.findAll();
+		ServletActionContext.getRequest().setAttribute("listCustomer",listCustomer);
+		
+		return "showLinkManSUCCESS";
+	}
+	//修改联系人
+	public String update(){
+		
+		linkManService.update(linkMan);
+		
+		return "updateSUCCESS";
+	}
 	
 }
