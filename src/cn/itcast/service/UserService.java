@@ -1,5 +1,7 @@
 package cn.itcast.service;
 
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import cn.itcast.dao.UserDao;
@@ -17,6 +19,11 @@ public class UserService {
 
 	public User login(User user) {
 		return userDao.findByUsernameAndPassword(user);
+	}
+	
+	//查询所有用户
+	public List<User> findAll() {
+		return userDao.findAll();
 	}
 	
 	

@@ -23,4 +23,10 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		return list.isEmpty() ? null : list.get(0);
 	}
 
+	//查询所有用户
+	@Override
+	public List<User> findAll() {
+		return (List<User>) this.getHibernateTemplate().find("from User");
+	}
+
 }
