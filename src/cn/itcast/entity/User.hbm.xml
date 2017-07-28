@@ -10,6 +10,14 @@
 		<property name="username" column="username"></property>
 		<property name="password" column="password"></property>
 		<property name="address" column="address"></property>
+		
+		<!-- 一个用户中有多条记录 -->
+		<set name="setUserVisit">
+			<key column="uvid"></key>
+			<one-to-many class="cn.itcast.entity.Visit" />
+		</set>
+		
+		
 	</class>
 </hibernate-mapping>
 

@@ -1,12 +1,24 @@
 package cn.itcast.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class User {
 	
 	private Integer uid;
 	private String username;
 	private String password;
 	private String address;
+	//一个用户多个拜访记录
+	private Set setUserVisit = new HashSet<Visit>();
 	
+	
+	public Set getSetUserVisit() {
+		return setUserVisit;
+	}
+	public void setSetUserVisit(Set setUserVisit) {
+		this.setUserVisit = setUserVisit;
+	}
 	public Integer getUid() {
 		return uid;
 	}

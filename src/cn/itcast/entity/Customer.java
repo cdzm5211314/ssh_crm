@@ -12,6 +12,15 @@ public class Customer {
 	private String custPhone;
 	private String custMobile;
 	
+	//一个客户中有多条记录
+	private Set setCusVisit = new HashSet<Visit>();
+	
+	public Set getSetCusVisit() {
+		return setCusVisit;
+	}
+	public void setSetCusVisit(Set setCusVisit) {
+		this.setCusVisit = setCusVisit;
+	}
 	//所有联系人
 	private Set<LinkMan> setLinkMan = new HashSet<LinkMan>(); 
 	public Set<LinkMan> getSetLinkMan() {

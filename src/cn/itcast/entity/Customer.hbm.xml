@@ -17,6 +17,12 @@
 			<key column="clid"></key>
 			<one-to-many class="cn.itcast.entity.LinkMan"/>
 		</set>
+		<!-- 一个客户有多条拜访记录 -->
+		<set name="setCusVisit">
+			<key column="cvid"></key>
+			<one-to-many class="cn.itcast.entity.Visit"/>
+		</set>
+		
 		
 	</class>
 </hibernate-mapping>
