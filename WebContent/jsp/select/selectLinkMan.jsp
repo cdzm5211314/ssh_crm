@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/customer_moreCodition.action"
+		action="${pageContext.request.contextPath }/linkman_moreCodition.action"
 		method="post" >
 		
 
@@ -49,15 +49,20 @@
 <tr>
 	<td>联系人名称：</td>
 	<td colspan="3">
-		<input type="text" name="custName"/>
+		<input type="text" name="lkmName"/>
 	</td>
 </tr>
 <TR>
 	<td>所属客户：</td>
 	<td>
-	<select>
-		<option>---请选择---</option>
-	
+	<select name="customer.cid">
+		<option value="0">---请选择---</option>
+		<c:forEach items="${list}" var="customer">
+			<option value="${customer.cid}">${customer.custName}</option>
+		
+		</c:forEach>
+		
+		
 	</select>
 	</td>
 	<td></td>

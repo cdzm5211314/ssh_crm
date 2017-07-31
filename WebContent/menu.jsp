@@ -213,7 +213,7 @@ A.active {
 				target=main>－ 客户信息查询</A></TD>
 		</TR>
 		<TR>
-			<TD class=menuSmall><A class=style2 href="#"
+			<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath}/linkman_toSelectLinkManPage.action"
 				target=main>－ 联系人信息查询</A></TD>
 		</TR>
 		<TR>

@@ -47,6 +47,10 @@
 			<result name="showLinkManSUCCESS">/jsp/linkman/edit.jsp</result>
 			<!-- 修改联系人 -->
 			<result name="updateSUCCESS" type="redirectAction">linkman_list</result>
+			<!-- 到联系人查询页面 -->
+			<result name="toSelectLinkManPageSUCCESS">/jsp/select/selectLinkMan.jsp</result>
+			<!-- 联系人查询 -->
+			<result name="moreCoditionSUCCESS">/jsp/linkman/list.jsp</result>
 		</action>
 		<!-- 拜访 -->
 		<action name="visit_*" class="visitAction" method="{1}">

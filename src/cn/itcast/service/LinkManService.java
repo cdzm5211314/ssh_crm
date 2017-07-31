@@ -28,6 +28,9 @@ public class LinkManService {
 	public void update(LinkMan linkMan) {
 		linkManDao.update(linkMan);
 	}
+	public List<LinkMan> moreCodition(LinkMan linkMan) {
+		return linkManDao.moreCodition(linkMan);
+	}
 
 	
 	

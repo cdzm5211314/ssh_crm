@@ -52,6 +52,20 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
 	public void setUploadFileName(String uploadFileName) {
 		this.uploadFileName = uploadFileName;
 	}
+	//到联系人查询页面
+	public String toSelectLinkManPage(){
+		
+		List<Customer> list = customerService.findAll();
+		ServletActionContext.getRequest().setAttribute("list", list);
+		return "toSelectLinkManPageSUCCESS";
+	}
+	//多条件查询
+	public String moreCodition(){
+		
+		List<LinkMan> list = linkManService.moreCodition(linkMan);
+		ServletActionContext.getRequest().setAttribute("list", list);
+		return "moreCoditionSUCCESS";
+	}
 	
 	//到添加联系人页面
 	public String toAddPage(){

@@ -14,4 +14,6 @@ public interface LinkManDao {
 
 	void update(LinkMan linkMan);
 
+	List<LinkMan> moreCodition(LinkMan linkMan);
+
 }
