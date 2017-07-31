@@ -10,36 +10,36 @@ import com.sun.org.apache.xpath.internal.operations.And;
 
 import cn.itcast.entity.Customer;
 
-public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao {
+public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDao {
 
-	//添加
-	@Override
-	public void save(Customer customer) {
-		this.getHibernateTemplate().save(customer);
-	}
-
-	//查询所有
-	@Override
-	public List<Customer> findAll() {
-		return (List<Customer>) this.getHibernateTemplate().find("from Customer");
-	}
-	
-	//根据id查询
-	@Override
-	public Customer findById(Integer cid) {
-		return this.getHibernateTemplate().get(Customer.class, cid);
-	}
-	
-	//删除客户
-	public void delete(Customer selectCustomer) {
-		this.getHibernateTemplate().delete(selectCustomer);
-	}
-
-	//修改
-	@Override
-	public void update(Customer customer) {
-		this.getHibernateTemplate().update(customer);
-	}
+//	//添加
+//	@Override
+//	public void save(Customer customer) {
+//		this.getHibernateTemplate().save(customer);
+//	}
+//
+//	//查询所有
+//	@Override
+//	public List<Customer> findAll() {
+//		return (List<Customer>) this.getHibernateTemplate().find("from Customer");
+//	}
+//	
+//	//根据id查询
+//	@Override
+//	public Customer findById(Integer cid) {
+//		return this.getHibernateTemplate().get(Customer.class, cid);
+//	}
+//	
+//	//删除客户
+//	public void delete(Customer selectCustomer) {
+//		this.getHibernateTemplate().delete(selectCustomer);
+//	}
+//
+//	//修改
+//	@Override
+//	public void update(Customer customer) {
+//		this.getHibernateTemplate().update(customer);
+//	}
 	
 	//分页的总记录数
 	@Override
@@ -78,7 +78,5 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 		
 		return list;
 	}
-
-	
 	
 }
