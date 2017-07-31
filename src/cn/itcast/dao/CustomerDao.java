@@ -22,5 +22,7 @@ public interface CustomerDao extends BaseDao<Customer>{
 
 	List<Customer> findcodition(Customer customer);
 
+	List<Customer> findMoreCodition(Customer customer);
+
 
 }

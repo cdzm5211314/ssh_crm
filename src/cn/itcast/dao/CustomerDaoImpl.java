@@ -79,4 +79,24 @@ public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDa
 		return list;
 	}
 	
+	//多条件查询
+	@Override
+	public List<Customer> findMoreCodition(Customer customer) {
+		//创建离线对象，指定对哪个实体类进行操作
+		DetachedCriteria criteria = DetachedCriteria.forClass(Customer.class);
+		//判断条件值是否为空
+		if(customer.getCustName()!=null && !"".equals(customer.getCustName())) {
+			//设置对属性，设置值
+			criteria.add(Restrictions.eq("custName", customer.getCustName()));
+		}
+//		if(customer.getCustLevel()!=null && !"".equals(customer.getCustLevel())) {
+//			criteria.add(Restrictions.eq("custLevel", customer.getCustLevel()));
+//		}
+		if(customer.getCustSource()!=null && !"".equals(customer.getCustSource())) {
+			criteria.add(Restrictions.eq("custSource", customer.getCustSource()));
+		}
+		
+		return (List<Customer>) this.getHibernateTemplate().findByCriteria(criteria);
+	}
+	
 }

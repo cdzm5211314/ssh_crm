@@ -27,6 +27,11 @@
 			<result name="listpageSUCCESS">/jsp/customer/listpage.jsp</result>
 			<!-- 条件查询 -->
 			<result name="listCoditionSUCCESS">/jsp/customer/list.jsp</result>
+			<!-- 到客户信息查询页面 -->
+			<result name="toSelectCustomerPageSUCCESS">/jsp/select/selectCustomer.jsp</result>
+			<!-- 客户多条件查询 -->
+			<result name="moreCoditionSUCCESS">/jsp/customer/list.jsp</result>
+			
 		</action>
 		<!-- 联系人操作 -->
 		<action name="linkman_*" class="linkManAction" method="{1}">

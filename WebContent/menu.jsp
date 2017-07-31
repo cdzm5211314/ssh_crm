@@ -205,22 +205,22 @@ A.active {
 								</TR>
 								<TR>
 									<TD>
-										<TABLE id=table_3 style="DISPLAY: none" cellSpacing=0
-											cellPadding=2 width=155 align=center border=0>
-											<TBODY>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－ 客户信息查询</A></TD>
-												</TR>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－ 联系人信息查询</A></TD>
-												</TR>
-												<TR>
-													<TD class=menuSmall><A class=style2 href="#"
-														target=main>－ 客户拜访记录查询</A></TD>
-												</TR>
-											</TBODY>
+<TABLE id=table_3 style="DISPLAY: none" cellSpacing=0
+	cellPadding=2 width=155 align=center border=0>
+	<TBODY>
+		<TR>
+			<TD class=menuSmall><A class=style2 href="${pageContext.request.contextPath}/customer_toSelectCustomerPage.action"
+				target=main>－ 客户信息查询</A></TD>
+		</TR>
+		<TR>
+			<TD class=menuSmall><A class=style2 href="#"
+				target=main>－ 联系人信息查询</A></TD>
+		</TR>
+		<TR>
+			<TD class=menuSmall><A class=style2 href="#"
+				target=main>－ 客户拜访记录查询</A></TD>
+		</TR>
+	</TBODY>
 										</TABLE>
 									</TD>
 								</TR>

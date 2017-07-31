@@ -63,5 +63,9 @@ public class CustomerService {
 	public List<Customer> findCodition(Customer customer) {
 		return customerDao.findcodition(customer);
 	}
+	//多条件查询
+	public List<Customer> findMoreCodition(Customer customer) {
+		return customerDao.findMoreCodition(customer);
+	}
 	
 }

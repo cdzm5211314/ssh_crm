@@ -123,5 +123,17 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		
 		return "editCustomerSUCCESS";
 	}
+	//到客户查询页面
+	public String toSelectCustomerPage(){
+		
+		return "toSelectCustomerPageSUCCESS";
+	}
+	//多条件查询
+	public String moreCodition(){
+		
+		List<Customer> list = customerService.findMoreCodition(customer);
+		ServletActionContext.getRequest().setAttribute("list", list);
+		return "moreCoditionSUCCESS";
+	}
 
 }
