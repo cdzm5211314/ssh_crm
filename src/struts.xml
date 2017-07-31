@@ -48,7 +48,9 @@
 			<!-- 到拜访页面 -->
 			<result name="toAddPageSUCCESS">/jsp/visit/add.jsp</result>
 			<!-- 添加拜访操作 -->
-			<result name="addVisitSUCCESS">/jsp/success.jsp</result>
+			<result name="addVisitSUCCESS">visit_list</result>
+			<!-- 到拜访记录列表 -->
+			<result name="listSUCCESS">/jsp/visit/list.jsp</result>
 		
 		</action>
 		
