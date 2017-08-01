@@ -7,11 +7,19 @@ public class Customer {
 	
 	private Integer cid;
 	private String custName;
-	private String custLevel;
+//	private String custLevel;
 	private String custSource;
 	private String custPhone;
 	private String custMobile;
 	
+	private Dict dictCustLevel;
+	
+	public Dict getDictCustLevel() {
+		return dictCustLevel;
+	}
+	public void setDictCustLevel(Dict dictCustLevel) {
+		this.dictCustLevel = dictCustLevel;
+	}
 	//一个客户中有多条记录
 	private Set setCusVisit = new HashSet<Visit>();
 	
@@ -41,12 +49,12 @@ public class Customer {
 	public void setCustName(String custName) {
 		this.custName = custName;
 	}
-	public String getCustLevel() {
-		return custLevel;
-	}
-	public void setCustLevel(String custLevel) {
-		this.custLevel = custLevel;
-	}
+//	public String getCustLevel() {
+//		return custLevel;
+//	}
+//	public void setCustLevel(String custLevel) {
+//		this.custLevel = custLevel;
+//	}
 	public String getCustSource() {
 		return custSource;
 	}

@@ -24,6 +24,7 @@
 		<mapping resource="cn/itcast/entity/Customer.hbm.xml"/>
 		<mapping resource="cn/itcast/entity/LinkMan.hbm.xml"/>
 		<mapping resource="cn/itcast/entity/Visit.hbm.xml"/>
+		<mapping resource="cn/itcast/entity/Dict.hbm.xml"/>
 		
 		
 	</session-factory>

@@ -8,7 +8,7 @@
 			<generator class="native"></generator>
 		</id>
 		<property name="custName" column="custName"></property>
-		<property name="custLevel" column="custLevel"></property>
+<!-- 		<property name="custLevel" column="custLevel"></property> -->
 		<property name="custSource" column="custSource"></property>
 		<property name="custPhone" column="custPhone"></property>
 		<property name="custMobile" column="custMobile"></property>
@@ -22,7 +22,8 @@
 			<key column="cvid"></key>
 			<one-to-many class="cn.itcast.entity.Visit"/>
 		</set>
-		
+		<!-- 所属级别 -->
+		<many-to-one name="dictCustLevel" class="cn.itcast.entity.Dict" column="custlevel"></many-to-one>
 		
 	</class>
 </hibernate-mapping>
