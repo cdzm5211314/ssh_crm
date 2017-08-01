@@ -31,6 +31,10 @@
 			<result name="toSelectCustomerPageSUCCESS">/jsp/select/selectCustomer.jsp</result>
 			<!-- 客户多条件查询 -->
 			<result name="moreCoditionSUCCESS">/jsp/customer/list.jsp</result>
+			<!-- 客户来源统计 -->
+			<result name="countSourcSUCCESS">/jsp/customer/listSource.jsp</result>
+			<!-- 客户级别统计 -->
+			<result name="countLevelSUCCESS">/jsp/customer/listLevel.jsp</result>
 			
 		</action>
 		<!-- 联系人操作 -->

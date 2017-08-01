@@ -80,7 +80,20 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 //		ActionContext.getContext().getValueStack().push(customer);
 		return "addCustomerSUCCESS";
 	}
-	
+	//客户来源统计
+	public String countSource(){
+		
+		List list = customerService.findCountSource();
+		ServletActionContext.getRequest().setAttribute("list",list);
+		return "countSourcSUCCESS";
+	}
+	//客户级别统计
+	public String countLevel(){
+		
+		List list = customerService.findCountLevel();
+		ServletActionContext.getRequest().setAttribute("list",list);
+		return "countLevelSUCCESS";
+	}
 	
 	
 	//客户列表

@@ -1,11 +1,17 @@
 package cn.itcast.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.annotations.Where;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.transform.Transformers;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
+import com.sun.org.apache.bcel.internal.generic.Select;
 import com.sun.org.apache.xpath.internal.operations.And;
 
 import cn.itcast.entity.Customer;
@@ -104,6 +110,37 @@ public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDa
 	@Override
 	public List<Dict> findAllDictLevel() {
 		return (List<Dict>) this.getHibernateTemplate().find("from Dict");
+	}
+	
+	//客户来源统计
+	@Override
+	public List findCountSource() {
+		
+		//调用底层sql实现
+		//1.获取session
+//		this.getHibernateTemplate().getSessionFactory();
+		Session session = this.getSessionFactory().getCurrentSession();
+		
+		//2. 得到SQLQuery
+		SQLQuery sqlQuery = session.createSQLQuery("select count(*) num,custSource from t_customer group by custSource");
+		
+		//改变默认结果中的数组结构为map结构
+		sqlQuery.setResultTransformer(Transformers.aliasToBean(HashMap.class));
+		
+		//3. 查询结果
+		List list =sqlQuery.list();
+		
+		return list;
+	}
+
+	@Override
+	public List findCountLevel() {
+		
+		Session session = this.getSessionFactory().getCurrentSession();
+		SQLQuery sqlQuery = session.createSQLQuery("select c.num ,d.dname from (select count(*) num,custlevel from t_customer group by custlevel) c,t_dict d where c.custLevel = d.did");
+		sqlQuery.setResultTransformer(Transformers.aliasToBean(HashMap.class));
+		
+		return sqlQuery.list();
 	}
 	
 }

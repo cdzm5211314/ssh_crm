@@ -72,5 +72,13 @@ public class CustomerService {
 	public List<Dict> findAllDictLevel() {
 		return customerDao.findAllDictLevel();
 	}
+	//客户来源统计
+	public List findCountSource() {
+		return customerDao.findCountSource();
+	}
+	//客户级别统计
+	public List findCountLevel() {
+		return customerDao.findCountLevel();
+	}
 	
 }

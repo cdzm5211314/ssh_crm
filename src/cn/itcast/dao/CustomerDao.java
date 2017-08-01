@@ -27,5 +27,9 @@ public interface CustomerDao extends BaseDao<Customer>{
 
 	List<Dict> findAllDictLevel();
 
+	List findCountSource();
+
+	List findCountLevel();
+
 
 }
