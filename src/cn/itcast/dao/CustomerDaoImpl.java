@@ -9,6 +9,7 @@ import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import com.sun.org.apache.xpath.internal.operations.And;
 
 import cn.itcast.entity.Customer;
+import cn.itcast.entity.Dict;
 
 public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDao {
 
@@ -97,6 +98,12 @@ public class CustomerDaoImpl extends BaseDaoImpl<Customer> implements CustomerDa
 		}
 		
 		return (List<Customer>) this.getHibernateTemplate().findByCriteria(criteria);
+	}
+	
+	//查询所有客户级别
+	@Override
+	public List<Dict> findAllDictLevel() {
+		return (List<Dict>) this.getHibernateTemplate().find("from Dict");
 	}
 	
 }

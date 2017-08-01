@@ -3,6 +3,7 @@ package cn.itcast.dao;
 import java.util.List;
 
 import cn.itcast.entity.Customer;
+import cn.itcast.entity.Dict;
 
 public interface CustomerDao extends BaseDao<Customer>{
 
@@ -23,6 +24,8 @@ public interface CustomerDao extends BaseDao<Customer>{
 	List<Customer> findcodition(Customer customer);
 
 	List<Customer> findMoreCodition(Customer customer);
+
+	List<Dict> findAllDictLevel();
 
 
 }

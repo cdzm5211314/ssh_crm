@@ -93,7 +93,7 @@
 												<TR
 													style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
 													<TD>${customer.custName }</TD>
-													<TD>${customer.custLevel }</TD>
+													<TD>${customer.dictCustLevel.dname }</TD>
 													<TD>${customer.custSource }</TD>
 													<TD>${customer.custPhone }</TD>
 													<TD>${customer.custMobile }</TD>

@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import cn.itcast.dao.CustomerDao;
 import cn.itcast.entity.Customer;
+import cn.itcast.entity.Dict;
 import cn.itcast.utils.PageBean;
 
 @Transactional
@@ -66,6 +67,10 @@ public class CustomerService {
 	//多条件查询
 	public List<Customer> findMoreCodition(Customer customer) {
 		return customerDao.findMoreCodition(customer);
+	}
+	//查询客户级别
+	public List<Dict> findAllDictLevel() {
+		return customerDao.findAllDictLevel();
 	}
 	
 }

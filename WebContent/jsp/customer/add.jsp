@@ -55,11 +55,16 @@
 								<INPUT class=textbox id=sChannel2
 														style="WIDTH: 180px" maxLength=50 name="custName">
 								</td>
-								<td>客户级别 ：</td>
-								<td>
-								<INPUT class=textbox id=sChannel2
-														style="WIDTH: 180px" maxLength=50 name="custLevel">
-								</td>
+<td>客户级别 ：</td>
+<td>
+<select name="dictCustLevel.did" >
+	<c:forEach items="${list }" var="dict">
+		<option value="${dict.did}">${dict.dname }</option>
+	</c:forEach>
+
+</select>
+
+</td>
 							</TR>
 							
 							<TR>

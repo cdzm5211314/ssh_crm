@@ -3,13 +3,12 @@ package cn.itcast.web.action;
 import java.util.List;
 
 import org.apache.struts2.ServletActionContext;
-import org.hibernate.usertype.CompositeUserType;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 import cn.itcast.entity.Customer;
+import cn.itcast.entity.Dict;
 import cn.itcast.service.CustomerService;
 import cn.itcast.utils.PageBean;
 
@@ -68,6 +67,8 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 	//到添加页面
 	public String toAddPage(){
 		
+		List<Dict> list = customerService.findAllDictLevel();
+		ServletActionContext.getRequest().setAttribute("list", list);
 		return "toAddPageSUCCESS";
 	}
 	
